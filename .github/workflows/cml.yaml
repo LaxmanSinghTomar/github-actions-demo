@@ -16,9 +16,7 @@ jobs:
         env:
           GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
         run: |
-          git init
-          dvc init
-
+        
           dvc pull data
           pip install -r requirements.txt
           dvc repro
